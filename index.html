@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>REACT - presentation by Alexey Bobrykov</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -16,8 +16,133 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					<textarea data-template>
+						# REACT
+						Alexey Bobrykov  
+						RS School 2020-Q3
+  					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### What is REACT
+						REACT is an open-source, front end, JavaScript library for building user interfaces or UI components. 
+						React can be used as a base in the development of single-page or mobile applications. 
+						However, REACT is only concerned with state management and rendering that state to the DOM, 
+						so creating REACT applications usually requires the use of additional libraries for routing
+  					</textarea>
+				</section>	
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							### Basic Usage
+						</textarea>
+					</div>
+					<pre><code data-trim data-noescape>
+&lt;div id=&quot;myReactApp&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/babel&quot;&gt;
+  function Greeter(props) {
+    return &lt;h1&gt;{props.greeting}&lt;/h1&gt;
+  }
+  var App = &lt;Greeter greeting=&quot;Hello World!&quot; /&gt;;
+  ReactDOM.render(App, document.getElementById('myReactApp'));
+&lt;/script&gt;
+					</code></pre>
+					<div data-markdown>
+						<textarea data-template>
+							When displayed in a web browser the result will be:
+						</textarea>						
+					</div>
+					<pre><code data-trim data-noescape>
+&lt;div id=&quot;myReactApp&quot;&gt;
+  &lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/div&gt;
+					</code></pre>
+				</section>
+				<section>
+					<div data-markdown>
+						<textarea data-template>
+							### Notable features
+							###### Components
+						</textarea>
+					</div>
+					<pre><code data-trim data-noescape>
+ReactDOM.render(&lt;Greeter greeting=&quot;Hello World!&quot; /&gt;, 
+	document.getElementById('myReactApp'));
+					</code></pre>
+					<div data-markdown>
+						<textarea data-template>
+							###### Functional components
+						</textarea>						
+					</div>
+					<pre><code data-trim data-noescape>
+const Greeting = (props) =&gt; &lt;div&gt;Hello, {props.name}!&lt;/div&gt;;
+					</code></pre>					
+				</section>
+				<section>
+				<div data-markdown>
+						<textarea data-template>
+							### Notable features
+							###### Class-based components
+						</textarea>						
+					</div>
+					<pre><code data-trim data-noescape>
+class ParentComponent extends React.Component {
+  state = { color: 'green' };
+  render() {
+    return (
+      &lt;ChildComponent color={this.state.color} /&gt;
+    );
+  }
+}
+					</code></pre>
+					<div data-markdown>
+					<textarea data-template>						
+						###### Virtual DOM
+						Another notable feature is the use of a virtual Document Object Model, or virtual DOM											
+  					</textarea>
+					  </div>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Notable features
+						###### Lifecycle methods
+						Lifecycle methods use a form of hooking that allows the execution of code at set points during a component's lifetime	
+						###### JSX
+						JSX, or JavaScript XML, is an extension to the JavaScript language syntax												
+  					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Notable features
+						###### Architecture beyond HTML
+						The basic architecture of React applies beyond rendering HTML in the browser						
+						###### React hooks
+						Hooks are functions that let developers "hook into" React state and lifecycle features from function components
+  					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Common idioms
+						React does not attempt to provide a complete "application library". 
+						It is designed specifically for building user interfaces and therefore does not include many of the tools some 
+						developers might consider necessary to build an application											
+  					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Future development
+						Project status can be tracked via the core team discussion forum. 
+						However, major changes to React go through the Future of React repository issues and pull requests. 
+						This enables the React community to provide feedback on new potential features, 
+						experimental APIs and JavaScript syntax improvements										
+  					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						# Thanx for attention!														
+  					</textarea>
+				</section>
 			</div>
 		</div>
 
